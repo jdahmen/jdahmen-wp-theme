@@ -62,11 +62,11 @@
             if (have_posts()) :
               while (have_posts()) : the_post(); ?>
 
-              <div class="col-md-4">  
+              <div class="col-md-4 excerpt">  
                 <h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
                 <?php include 'post-details.php'; ?>
-                <p><?php the_excerpt(__('(more…)')); ?></p>
-                <a class="continued" href="<?php the_permalink(); ?>">Keep reading</a>
+                <?php the_excerpt(__('(more…)')); ?>
+                <a class="button" href="<?php the_permalink(); ?>">Keep reading</a>
               </div>
 
           <?php

@@ -11,10 +11,11 @@ get_header(); ?>
 	 
 	<div class="container">
 		<div class="row">
-			<div class="col-md-8 col-sm-12">
+			<div class="col-md-9 col-sm-12">
 				<?php include 'inc/display-posts.php'; ?>
 			</div>
-			<div class="col-md-8 hidden-sm">
+			<div class="col-md-3 hidden-sm">
+				<?php include 'inc/single-sidebar.php'; ?>		
 			</div>
 		</div>
 	</div>

@@ -16,7 +16,7 @@ Version: 0.2
 @import url(http://fonts.googleapis.com/css?family=Slabo+13px);
 
 /**************************************************/
-/* Basic    									  */
+/* Global    									  */
 /**************************************************/
 
 body {
@@ -35,8 +35,27 @@ body {
 		padding-top: 32px !important;
 	}
 
+a:link,
+a:hover,
+a:visited,
+a:active {
+	color: #29B6F6;
+	-webkit-transition: color .16s;
+	transition: color .16s;
+}
+
 a {
 	text-decoration: none;
+}
+
+h1 a:hover,
+h2 a:hover,
+h3 a:hover {
+	color: #13A0E0;
+	text-decoration: none;
+	-webkit-transition: color .16s;
+	transition: color .16s;
+
 }
 
 /**************************************************/
@@ -54,6 +73,7 @@ a.button:visited {
 	background-color: #F7F7F7;
 	-webkit-transition: background-color .15s;
 	transition: background-color .15s;
+	font-size: 0.95em;
 }
 
 a.button:hover {
@@ -63,12 +83,30 @@ a.button:hover {
 }
 
 a.button:active {
-	-webkit-box-shadow: inset 0 3px 5px 0px rgba(0,0,0,0.1);
-	-moz-box-shadow: inset 0 3px 5px 0px rgba(0,0,0,0.1);
-	box-shadow: inset 0 3px 5px 0px rgba(0,0,0,0.1);	
-	-webkit-transition: -webkit-box-shadow -moz-box-shadow box-shadow 1s;
-	transition: -webkit-box-shadow -moz-box-shadow box-shadow 1s;
+	-webkit-box-shadow: inset 0 3px 5px 0px rgba(0,0,0,0.08);
+	-moz-box-shadow: inset 0 3px 5px 0px rgba(0,0,0,0.08);
+	box-shadow: inset 0 3px 5px 0px rgba(0,0,0,0.08);	
+	-webkit-transition: box-shadow .5s;
+	transition: box-shadow .5s;
 }
+
+	a.button.blue:link,
+	a.button.blue:hover,
+	a.button.blue:visited {
+		background-color: #29B6F6;
+		border-color: #9D9D9D;
+		color: #FFF;
+	}
+
+	a.button.blue:hover {
+		background-color: #13A0E0;
+	}
+
+	a.button.blue:active {
+		-webkit-box-shadow: inset 0 3px 5px 0px rgba(0,0,0,0.1);
+		-moz-box-shadow: inset 0 3px 5px 0px rgba(0,0,0,0.1);
+		box-shadow: inset 0 3px 5px 0px rgba(0,0,0,0.1);
+	}
 
 /**************************************************/
 /* Errors	 									  */
@@ -271,6 +309,28 @@ a.button:active {
 		color: #000;
 	}
 
+	.excerpt {
+		margin-bottom: 24px;
+	}
+
+		.excerpt h1,
+		.excerpt h2 {
+			font-weight: bold;
+		}
+
+		.excerpt.list {
+			margin-bottom: 48px;
+		}
+
+		.excerpt hr {
+			margin: 16px auto 8px auto;
+		}
+
+		.excerpt p {
+			margin: 16px auto 24px auto;
+			overflow: hidden;
+		}
+
 /**************************************************/
 /* Footer	 									  */
 /**************************************************/
@@ -279,7 +339,7 @@ footer {
 	background-color: rgb(40, 40, 45);
 	color: #FFF;
 	padding-bottom: 30px;
-	margin-top: 20px;
+	margin-top: 50px;
 	text-align: left;
 }
 
@@ -325,17 +385,6 @@ footer {
 		border-left: 3px solid #29B6F6;
 		padding-left: 12px;
 		margin: 12px auto 12px 2px;
-	}
-
-	#blog a.continued,
-	#blog a.continued:link,
-	#blog a.continued:visited {
-		color: #29B6F6;
-		text-decoration: none;
-	}
-
-	#blog a.continued:hover {
-		color: #2297CC;
 	}
 
 	#blog br {
