@@ -8,16 +8,16 @@
 	    <h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
   	  	<?php include 'post-details.php'; ?>
   	  	<hr />
-	  	  <?php 
-	  	  	if ( is_single() ) :
-	  	  		the_content(); 
-	  	  	else :
-	  	  		the_excerpt(__('(more…)')); 
-	  	  ?>	  	  	
-	  	  <a class="button blue" href="<?php the_permalink(); ?>">Read More</a>
-	  	  <?php
-	  	  	endif;
-	  	  ?>
+		<?php 
+			if ( is_single() ) :
+				the_content(); 
+			else :
+				the_excerpt(__('(more…)')); 
+		?>	  	  	
+			<a class="button blue" href="<?php the_permalink(); ?>">Read More</a>
+		<?php
+			endif;
+		?>
 	 </div>
  	</div>
 

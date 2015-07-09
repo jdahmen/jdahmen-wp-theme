@@ -1,16 +1,19 @@
-/**
- * Theme Name: JDahmen
- * Author: Jordan Dahmen
- * Author URI: http://www.jdahmen.me/
- * Description: Portfolio site theme for Jordan Dahmen
- * Version: 0.2
- */
+/*!
+	Theme Name: JDahmen
+	Author: Jordan Dahmen
+	Author URI: http://www.jdahmen.me/
+	Description: Portfolio site theme for Jordan Dahmen
+	Version: 0.2
+*/
 
 /* Imports */
 
-@import url(http://fonts.googleapis.com/css?family=Lobster|Patua+One|Roboto+Slab)
-@import url(http://fonts.googleapis.com/css?family=Slabo+13px)
+// @import url(http://fonts.googleapis.com/css?family=Lobster|Patua+One|Roboto+Slab)
+// @import url(http://fonts.googleapis.com/css?family=Slabo+13px)
 
+@import "compass";
+@import "partials/normalize";
+@import "partials/variables";
 
 /* Colors */
 

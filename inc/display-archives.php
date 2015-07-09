@@ -41,7 +41,7 @@
 				else :
 					the_excerpt(__('(more…)')); 
 			?>	  	  	
-			<a class="button blue" href="<?php the_permalink(); ?>">Read More</a>
+				<a class="button blue" href="<?php the_permalink(); ?>">Read More</a>
 			<?php
 				endif;
 			?>
