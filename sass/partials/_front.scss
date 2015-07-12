@@ -1,0 +1,40 @@
+.gray {
+	width: 100%;
+	height: auto;
+	background-color: $lightestGray;
+	&.xtra-padding {
+		padding-top: 50px;
+	}
+}
+
+#contact {
+	#contact-form input, textarea {
+		background-color: $white;
+		color: $darkestGray;
+		padding: 4px 5px 4px 5px;
+		border: 1px solid $primary;
+		border-radius: 3px;
+		@include transition(background-color .2s);
+	}
+	textarea, #contact-form input {
+		margin-bottom: 14px;
+		width: 48.9%;
+		float: left;
+	}
+	textarea {
+		width: 100%;
+		height: 120px;
+	}
+	#contact-form {
+		#emailInput {
+			float: right;
+		}
+		#sendBtn {
+			width: 100%;
+			&:hover {
+				background-color: darken($white, 8%);
+				@include transition(background-color .2s);
+			}
+		}
+	}
+}

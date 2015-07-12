@@ -1,0 +1,128 @@
+.navbar {	
+	&.fancy {
+		min-height:70px !important;
+		background-color: $transparent;
+		border-color: $transparent;
+		border-bottom-width: 0px;
+		@include transition(background-color .3s);
+		&.on-scroll {
+			background-color: rgb(40, 40, 45);
+			@include transition(background-color .5s);
+		}
+		.navbar-nav {
+			li {
+				a {
+					padding-top: 25px !important;
+					padding-bottom: 25px !important;
+					padding-left: 13px;
+					padding-right: 13px;
+					font-family: 'Slabo 13px', serif;
+					font-size: 20px;
+					font-weight: bold;
+					-webkit-font-smoothing: antialiased;
+					-webkit-text-shadow: rgba(0,0,0,.01) 0 0 1px;
+					text-shadow: rgba(0,0,0,.01) 0 0 1px;
+					&:hover {
+						@include transition(color .2s);
+					}
+				}
+			}
+			> .active {
+				> a {
+					&, &:visited, &:focus {
+						color: $primary;
+						background-color: $transparent;
+					}
+					&:hover {
+						color: darken($primary, 8%);
+					}
+				}
+			}
+		}
+	}
+	&-default.fancy {
+		.navbar-nav {
+			> li {
+				#{$a-tags} {
+					color: $white;
+				}
+				a:hover {
+					color: darken($white, 16%);
+					@include transition(color .2s);
+				}
+			}
+		}
+		.navbar-brand {
+			padding-top: 22px !important;
+			font-size: 35px;
+			color: $transparent;
+			#layer1 {
+				fill: blue;
+			}
+		}
+		.navbar-brand {
+			> img {
+				margin-top: -8px;
+				margin-right: 12px;
+				height: 40px;
+				width: 40px;
+				float: left;
+				fill: $primary;
+			}
+		}
+	}
+}
+
+@media (max-width: 991px) {
+
+	.navbar-default.fancy,
+	.navbar.fancy .navbar-toggle:focus,
+	.navbar.fancy .navbar-toggle:hover {
+		border-color: $primary;
+	}
+	.navbar-default {
+		&.fancy {
+			.navbar-toggle {
+				border-color: $white;
+				.icon-bar {
+					background-color: $white;
+				}
+				&:focus, &:hover {
+					background-color: rgba(255, 255, 255, 0.5);
+				}
+			}
+		}
+	}
+	.navbar.fancy {
+		.navbar-brand {
+			> img {
+				margin-top: -10px;
+				margin-right: 12px;
+				height: 35px;
+				width: 35px;
+			}
+		}
+	}	
+}
+
+@media (max-width: 767px) {
+
+	.navbar {
+		&.fancy {
+			min-height: 56px !important;
+			.navbar-collapse {
+				background-color: rgba(35, 35, 35, 1);
+			}
+		}
+		&-default {
+			&.fancy {
+				.navbar-brand {
+					padding-top: 20px !important;
+				}
+				.navbar-collapse, .navbar-form {
+					border-color: rgba(35, 35, 35, 1);
+				}
+			}
+		}
+	}
+}
