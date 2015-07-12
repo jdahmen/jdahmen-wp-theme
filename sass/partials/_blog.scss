@@ -60,6 +60,7 @@
 
 .single, .excerpt, #blog {
 	h5 {
+		font-size: 0.8em;
 		color: lighten( $darkestGray, 50% );
 		border-left: 3px solid $primary;
 		padding-left: 12px;
