@@ -2,8 +2,14 @@
 
 <body <?php body_class(); ?>>
 	<?php 
-		// Index main menu
-		include 'inc/front-main-nav.php';
+		// check if front page
+		if ( is_front_page() && is_home() ) {
+			// front page
+			include 'inc/front-main-nav.php';
+		} else {
+			// not front page
+			include 'inc/main-nav.php';
+		}
 	?>
 
 	<div id="content">

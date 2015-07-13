@@ -21,7 +21,9 @@ if ( ! function_exists( 'cwd_wp_bootstrapwp_theme_setup' ) ):
   function cwd_wp_bootstrapwp_theme_setup() {
     // Adds the main menu
     register_nav_menus( array(
+      'front-main-menu' => __( 'Main Menu', 'cwd_wp_bootstrapwp' ),
       'main-menu' => __( 'Main Menu', 'cwd_wp_bootstrapwp' ),
+      'social-footer' => 'Social Footer Links',
     ) );
   }
 endif;

@@ -1,0 +1,66 @@
+.gray {
+	width: 100%;
+	height: auto;
+	background-color: $lightestGray;
+	// @include box-shadow(inset 0 0 10px rgba(0, 0, 0, 0.05));
+	&.xtra-padding {
+		padding-top: 30px;
+	}
+}
+
+#resume, #contact, #blog, #work {
+	margin: 20px auto 30px auto;
+}
+
+#contact {
+	#contact-form input, textarea {
+		background-color: $white;
+		color: $darkestGray;
+		padding: 4px 5px 4px 5px;
+		border: 1px solid $primary;
+		border-radius: 3px;
+		@include transition(background-color .2s);
+	}
+	textarea, #contact-form input {
+		margin-bottom: 14px;
+		width: 48.9%;
+		float: left;
+	}
+	textarea {
+		width: 100%;
+		height: 120px;
+	}
+	#contact-form {
+		#emailInput {
+			float: right;
+		}
+		#sendBtn {
+			width: 100%;
+			&:hover {
+				background-color: darken($white, 8%);
+				@include transition(background-color .2s);
+			}
+		}
+	}
+}
+
+.progress {
+	height: 28px;
+	position: relative;
+	@include box-shadow(1px 1px 4px rgba(0, 0, 0, 0.25));
+	background-color: $white;
+	.progress-bar {
+		background-color: $primary;
+		box-shadow: none;
+		z-index: -99;
+		span {
+			font-size: 1.5em;
+			font-family: 'Open Sans', sans-serif;
+			line-height: 24px;
+			position: absolute;
+		    display: block;
+		    width: 100%;
+		    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.25);
+		}		
+	}
+}

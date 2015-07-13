@@ -1,0 +1,66 @@
+body {
+	font-family: 'Open Sans', sans-serif;
+	background: $white;
+	color: $darkestGray;
+	font-size: 18px;
+}
+
+body.logged-in { 
+	.navbar {
+		padding-top: 32px !important;
+	}
+}
+
+a {
+	text-decoration: none;
+}
+
+#{$a-tags} {
+	color: $primary;
+	@include transition(color .16s);
+}
+
+h1, h2, h3 {
+	margin: 12px auto 12px auto;
+	#{a-tags} {
+		text-decoration: none;
+	}
+	a:hover {
+		color: $darkerBlue;
+		text-decoration: none;
+		@include transition(color .16s);
+	}
+}
+
+h1 {
+	font-size: 2.5em;
+}
+
+h2 {
+	font-size: 1.6em;
+	line-height: 1.2em;
+}
+
+h4 {
+	margin: 12px auto 12px auto;
+}
+
+@media (max-width: 767px) {
+
+	h1 {
+		font-size: 2em;
+	}
+
+	h2 {
+		font-size: 1.45em;
+	}
+
+	// Wordpress workaround for managment bar
+	body {
+		&.logged-in {
+			.navbar.fancy {
+				padding-top: 46px !important;
+			}
+		}
+	}
+}

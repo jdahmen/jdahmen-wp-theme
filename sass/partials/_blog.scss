@@ -1,0 +1,70 @@
+.single {
+	h1 {
+		font-weight: bold;
+		color: $darkestGray;
+		&.title {
+			margin: 32px 0 0 0;
+		}
+	}
+	h5 {
+		margin: 16px auto 24px 2px;
+		font-size: 0.8em;
+		line-height: 1.32em;
+	}
+	.wp-caption-text {
+		font-size: 0.85em;
+		margin: 6px auto 10px auto;
+	}
+}
+
+.post_tags {
+	a {
+		&, &:hover, &:visited {
+			font-size: 1em;
+			color: $darkestGray;
+			margin: 0 8px 8px 0;
+		}
+		&:hover, &:active {
+			color: $black;
+		}
+	}
+}
+
+.excerpt {
+	margin-bottom: 24px;
+	&.list {
+		margin-bottom: 48px;
+	}
+	h1, h2 {
+		font-weight: bold;
+		line-height: 1.25em;
+		margin-bottom: 16px;
+	}
+	hr {
+		margin: 16px auto 8px auto;
+	}
+	p {
+		margin: 16px auto 24px auto;
+		overflow: hidden;
+	}
+}
+
+#blog {
+	br {
+		font-size: 1.4em;
+	}
+	.excerpt {
+		margin-bottom: 40px;
+	}
+}
+
+.single, .excerpt, #blog {
+	h5 {
+		font-size: 0.8em;
+		color: lighten( $darkestGray, 50% );
+		border-left: 3px solid $primary;
+		padding-left: 12px;
+		margin: 12px auto 12px 2px;
+		line-height: 1.25em;
+	}
+}
