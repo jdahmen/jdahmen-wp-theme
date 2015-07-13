@@ -18,7 +18,7 @@
 	  	  		the_excerpt(__('(more…)')); 
 	  	  ?>
 	  	  	</p>
-	  	  	<a class="continued" href="<?php the_permalink(); ?>">Keep reading</a>
+	  	  	<a class="continued" href="<?php the_permalink(); ?>">Read More</a>
 	  	  <?php
 	  	  	endif;
 	  	  ?>
