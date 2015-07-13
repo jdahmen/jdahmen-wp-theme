@@ -2,6 +2,7 @@
 	width: 100%;
 	height: auto;
 	background-color: $lightestGray;
+	// @include box-shadow(inset 0 0 10px rgba(0, 0, 0, 0.05));
 	&.xtra-padding {
 		padding-top: 50px;
 	}
@@ -36,5 +37,26 @@
 				@include transition(background-color .2s);
 			}
 		}
+	}
+}
+
+.progress {
+	height: 28px;
+	position: relative;
+	@include box-shadow(1px 1px 4px rgba(0, 0, 0, 0.25));
+	background-color: $white;
+	.progress-bar {
+		background-color: $primary;
+		box-shadow: none;
+		z-index: -99;
+		span {
+			font-size: 1.5em;
+			font-family: 'Open Sans', sans-serif;
+			line-height: 24px;
+			position: absolute;
+		    display: block;
+		    width: 100%;
+		    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.25);
+		}		
 	}
 }

@@ -22,6 +22,9 @@ a {
 
 h1, h2, h3 {
 	margin: 12px auto 12px auto;
+	#{a-tags} {
+		text-decoration: none;
+	}
 	a:hover {
 		color: $darkerBlue;
 		text-decoration: none;

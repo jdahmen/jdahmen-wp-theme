@@ -22,15 +22,36 @@
               </div>
               <div class="col-md-4">
                 <h2>Skills</h2>
-                <h4><i>By Experience</i></h4>
-                <ul>
-                  <li>HTML/CSS</li>
-                  <li>Java Enterprise</li>                
-                  <li>C/C++</li>
-                  <li>SQL</li>
-                  <li>PHP/JS</li>
-                  <li>Virtualization</li>
-                </ul>
+                <div class="progress">
+                  <div class="progress-bar" role="progressbar" aria-valuenow="90"
+                  aria-valuemin="0" aria-valuemax="100" style="width:90%">
+                    <span>HTML/CSS</span>
+                  </div>
+                </div>
+                <div class="progress">
+                  <div class="progress-bar" role="progressbar" aria-valuenow="85"
+                  aria-valuemin="0" aria-valuemax="100" style="width:85%">
+                    <span>Java/Java Enterprise</span>
+                  </div>
+                </div>
+                <div class="progress">
+                  <div class="progress-bar" role="progressbar" aria-valuenow="72"
+                  aria-valuemin="0" aria-valuemax="100" style="width:72%">
+                    <span>C/C++</span>
+                  </div>
+                </div>
+                <div class="progress">
+                  <div class="progress-bar" role="progressbar" aria-valuenow="70"
+                  aria-valuemin="0" aria-valuemax="100" style="width:70%">
+                    <span>SQL</span>
+                  </div>
+                </div>
+                <div class="progress">
+                  <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="65"
+                  aria-valuemin="0" aria-valuemax="100" style="width:65%">
+                    <span>PHP/JS</span>
+                  </div>
+                </div>
               </div>
             </div>
         </div>
@@ -73,7 +94,7 @@
                   <h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
                   <?php include 'post-details.php'; ?>
                   <?php the_excerpt(__('(more…)')); ?>
-                  <a class="button" href="<?php the_permalink(); ?>">Keep reading</a>
+                  <a class="button" href="<?php the_permalink(); ?>">Read More</a>
                 </div>
 
             <?php
