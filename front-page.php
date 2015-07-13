@@ -1,7 +1,7 @@
 <!-- <head> elements -->
 <?php include 'inc/head.php'; ?>
 
-<body data-spy="scroll" data-offset="100" data-target=".navbar-collapse" <?php body_class(); ?>>
+<body data-spy="scroll" data-offset="70" data-target=".navbar-collapse" <?php body_class(); ?>>
 
 	<?php
 		// Front page custom main menu

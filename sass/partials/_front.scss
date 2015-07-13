@@ -4,8 +4,12 @@
 	background-color: $lightestGray;
 	// @include box-shadow(inset 0 0 10px rgba(0, 0, 0, 0.05));
 	&.xtra-padding {
-		padding-top: 50px;
+		padding-top: 30px;
 	}
+}
+
+#resume, #contact, #blog, #work {
+	margin: 20px auto 30px auto;
 }
 
 #contact {
