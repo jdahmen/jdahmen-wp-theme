@@ -1,10 +1,15 @@
 <?php 
 
-/**
- * Enqueues scripts and styles for front end.
- *
- * @return void
- */
+// Adapted from https://gist.github.com/toscho/1584783
+add_filter( 'clean_url', function( $url )
+{
+    if ( FALSE === strpos( $url, '.js' ) )
+    { // not our file
+        return $url;
+    }
+    // Must be a ', not "!
+    return "$url' defer='defer";
+}, 11, 1 );
 
 function cwd_wp_bootstrap_scripts_styles() {
   // Loads Bootstrap minified JavaScript file.
@@ -27,6 +32,8 @@ if ( ! function_exists( 'cwd_wp_bootstrapwp_theme_setup' ) ):
     ) );
   }
 endif;
+
+add_theme_support( 'html5', array( 'search-form' ) );
 
 add_theme_support( 'post-thumbnails' ); 
 
