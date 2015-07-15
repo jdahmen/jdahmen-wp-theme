@@ -13,7 +13,22 @@
 	?>
 
 	<div id="content">
-		<div id="header-image">
-			<!-- Leave empty -->
+		<div id="header-image" data-parallax="scroll" data-image-src="<?php echo get_stylesheet_directory_uri(); ?>/img/fancy-bg.jpg">
+			<div class="container">
+				<div  class="superheader">
+					<h1>
+						<?php
+							if ( is_archive() ) {
+								echo 'Archives';
+							} elseif ( is_home() ) {
+								echo 'Blog';
+							} else {
+								echo '&nbsp;';
+							}
+						?>
+					</h1>
+				</div>
+			</div>
+			<div class="blue-bar"></div>
 		</div>
 

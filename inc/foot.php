@@ -6,6 +6,7 @@
   <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
   <script src="<?php echo get_stylesheet_directory_uri(); ?>/js/ie10-viewport-bug-workaround.js"></script>
   <script src="<?php echo get_stylesheet_directory_uri(); ?>/js/affix.js"></script>
+  <script src="<?php echo get_stylesheet_directory_uri(); ?>/js/parallax.min.js"></script>
   <script src="<?php echo get_stylesheet_directory_uri(); ?>/js/custom.js"></script>
 
 	<?php 

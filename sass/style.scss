@@ -7,9 +7,7 @@
 */
 
 // Fonts
-@import url(http://fonts.googleapis.com/css?family=Lobster|Patua+One|Roboto+Slab);
-@import url(http://fonts.googleapis.com/css?family=Slabo+13px);
-
+@import url(http://fonts.googleapis.com/css?family=Lobster|Patua+One|Roboto+Slab|Slabo+13px);
 
 // Variables and Standarization
 @import "compass";
@@ -21,8 +19,10 @@
 @import "partials/buttons";
 @import "partials/navigation";
 @import "partials/header";
+@import "partials/searchform";
 @import "partials/fancy";
 @import "partials/front";
+@import "partials/sidebar";
 @import "partials/blog";
 @import "partials/footer";
 

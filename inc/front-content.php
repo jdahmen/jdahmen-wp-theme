@@ -64,13 +64,13 @@
       <h1><a href="#">Work</a></h1>
         <div class="row">
           <div class="col-md-4">
+             <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/code_1.png">
+          </div>
+          <div class="col-md-4">
             <h2>Reddit Scraper</h2>
             <p>
               As part of a class project, I co-developed a proof of concept reddit user scraper. Using concurrent programming techniques and JSoup,
             </p>
-          </div>
-          <div class="col-md-4">
-
           </div>
           <div class="col-md-4">
 
@@ -111,7 +111,10 @@
 </div>
 <div class="container">
   <div id="contact" class="row">
-    <div class="col-md-8">
+    <div class="col-md-12">
+      <?php echo do_shortcode( '[contact-form-7 id="37" title="Contact form 1"]' ); ?>
+    </div>
+<!--     <div class="col-md-8">
       <h1><a href="#">Contact</a></h1>
       <form id="contact-form">
           <input type="text" name="name" placeholder="Name">
@@ -123,6 +126,6 @@
     <div class="col-md-4">
       <h1>Links</h1>
 
-    </div>
+    </div> -->
   </div>
 </div>

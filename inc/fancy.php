@@ -1,4 +1,4 @@
-<div id="fancy-main">
+<div id="fancy-main" data-parallax="scroll" data-image-src="<?php echo get_stylesheet_directory_uri(); ?>/img/fancy-bg.jpg">
   <div class="container">
     <div class="row">
       <div class="col-md-12" id="fancy-content">

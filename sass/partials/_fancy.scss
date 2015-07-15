@@ -3,11 +3,12 @@
 	min-height: 100vh;
 	padding-top: 20px;
 	overflow: hidden;
-	background-image: linear-gradient(
-			rgba(5, 0, 30, 0.5),
-			rgba(5, 0, 25, 0.4)
-		),
-		url('img/fancy-bg.jpg');
+	background-color: $transparent;
+	// background-image: linear-gradient(
+	// 		rgba(5, 0, 30, 0.5),
+	// 		rgba(5, 0, 25, 0.4)
+	// 	),
+	// 	url('img/fancy-bg.jpg');
 	background-size: cover;
 }
 
@@ -32,7 +33,7 @@
 			color: $primary;
 		}
 		h1 {
-			font-family: 'Patua One', cursive;
+			font-family: 'Patua One', Arial, sans-serif;
 			font-size: 4em;
 		}
 		h2 {
@@ -44,6 +45,7 @@
 
 .blue-bar {
 	border-top: 30px solid $primary;
+	@include box-shadow(3px 0 30px rgba(0, 0, 0, 0.6));
 }
 
 @media (max-width: 991px) {

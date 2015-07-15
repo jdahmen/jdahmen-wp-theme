@@ -14,8 +14,8 @@ get_header(); ?>
 			<div class="col-md-9 col-sm-12">
 				<?php include 'inc/display-posts.php'; ?>
 			</div>
-			<div class="col-md-3 hidden-sm">
-				<?php include 'inc/single-sidebar.php'; ?>		
+			<div class="col-md-3 hidden-sm hidden-xs">
+				<?php include 'inc/single-sidebar.php'; ?>	
 			</div>
 		</div>
 	</div>

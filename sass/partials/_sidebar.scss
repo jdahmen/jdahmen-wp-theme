@@ -1,0 +1,32 @@
+#sidebar {
+	#search {
+		margin-bottom: 20px;
+	}
+	.well {
+		background-color: $lightestGray;
+		border: 0;
+		#{$a-tags} {
+			font-size: 1em;
+			color: $primary;
+		}
+		&.categories {
+			list-style: none;
+			line-height: 1.4em;
+			.children {
+				list-style: none;
+				margin-bottom: 1.8em;
+				li {
+					text-indent: -5px;
+					&:before{ 
+						content: "-"; 
+						position: relative; 
+						left: -5px;
+					}
+				}
+			}
+		}
+		&.tags {
+			// Empty
+		}
+	}
+}

@@ -5,9 +5,9 @@ a.button{
 	/* Default button */
 	&, &:hover, &:visited {
 		padding: 6px 8px 6px 8px;
-		border: solid 1px $darkGray;
+		border: solid 1px $lightGray;
 		border-radius: 3px;
-		color: $black;
+		color: $darkestGray;
 		text-decoration: none;
 		background-color: $lightestGray;
 		@include transition($default-button-transition);
@@ -25,7 +25,7 @@ a.button{
 	&.blue {
 		&:link, &:visited {
 			background-color: $primary;
-			border-color: $darkGray;
+			border-color: $gray;
 			color: $white;
 		}
 		&:hover {
@@ -33,6 +33,15 @@ a.button{
 		}
 		&:active {
 			@include box-shadow($default-button-shadow);
+		}
+	}
+}
+
+.gray {
+	a.button {
+		&, &:hover, &:visited {
+			background-color: $lightGray;
+			border-color: $gray;
 		}
 	}
 }
