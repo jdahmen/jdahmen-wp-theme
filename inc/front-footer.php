@@ -2,7 +2,7 @@
         <div class="container">
       	    <div class="row">
       		    <div class="col-md-4">
-                    <h3>This is the footer...</h3>
+                    <h4>This is the footer...</h4>
                     <p>
                         and it appears you're looking for more! Maybe go check out my 
                         <a href="<?php echo bloginfo('url') . '/blog/'; ?>">blog</a> to 
@@ -11,7 +11,7 @@
                     </p>
           		</div>
           		<div class="col-md-4">
-          			<h3>Social</h3>
+          			<h4>Social</h4>
           			<?php // footer menu
         				wp_nav_menu( array(
         					'container_class' => 'social-links',
@@ -20,8 +20,14 @@
         			?>
           		</div>
               <div id="copyright" class="col-md-4 center">
-                    <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/logo.svg" class="logo" alt="JDahmen logo">
-                    &copy; Jordan Dahmen, 2015
+                <div class="row">
+                    <div class="col-md-12">
+                      <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/logo-darkgray.svg" class="logo" alt="JDahmen logo">
+                    </div>
+                    <div class="col-md-12">
+                      &copy; Jordan Dahmen, 2015
+                    </div>
+                  </div>
               </div>
       	    </div>
       </footer>

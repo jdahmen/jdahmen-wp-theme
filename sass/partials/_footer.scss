@@ -5,17 +5,23 @@ footer {
 	padding-bottom: 40px;
 	margin-top: 50px;
 	text-align: left;
-	h3 {
-		border-bottom: dotted 1px $lightestGray;
+	overflow: hidden;
+	-webkit-box-shadow: inset 0 10px 10px -10px rgba(0, 0, 0, 0.8);
+    -moz-box-shadow: inset 0 10px 10px -10px rgba(0, 0, 0, 0.8);
+    box-shadow: inset 0 10px 10px -10px rgba(0, 0, 0, 0.8);
+	h4 {
+		color: $darkGray;
+		border-bottom: dotted 1px $darkGray;
 	}
 	p {
-		color: $white;
+		color: $darkGray;
 		#{$a-tags} {
 			color: $primary;
 		}
 	}
 	.logo {
 		width: 45%;
+		max-width: 150px;
 		height: auto;
 		margin: 12px 27.5% 12px 27.5%;
 	}

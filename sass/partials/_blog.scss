@@ -8,7 +8,7 @@
 	}
 	h5 {
 		margin: 16px auto 24px 2px;
-		font-size: 0.8em;
+		font-size: $h5-info-font-size;
 		line-height: 1.32em;
 	}
 	.wp-caption-text {
@@ -60,7 +60,7 @@
 
 .single, .excerpt, #blog {
 	h5 {
-		font-size: 0.8em;
+		font-size: $h5-info-font-size;
 		color: lighten( $darkestGray, 50% );
 		border-left: 3px solid $primary;
 		padding-left: 12px;
