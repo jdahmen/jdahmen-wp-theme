@@ -22,6 +22,10 @@ get_header(); ?>
 			<div class="col-md-3 hidden-sm hidden-xs">
 				<?php include 'inc/single-sidebar.php'; ?>				
 			</div>
+			<div class="col-md-12">
+				<hr />
+				<?php comments_template(); ?> 
+			</div>
 		</div>
 	</div>
 

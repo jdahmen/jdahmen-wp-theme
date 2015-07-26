@@ -15,7 +15,7 @@ get_header(); ?>
 		<div class="container">
 			<div class="row">
 				<div class="col-md-8">
-					<?php include 'inc/display-posts.php'; ?>
+					<?php include 'inc/display-single.php'; ?>
 				</div>
 			</div>
 		</div>
