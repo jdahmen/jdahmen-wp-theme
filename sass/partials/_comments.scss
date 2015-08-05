@@ -1,0 +1,39 @@
+.commentlist {
+	p {
+		margin: 16px auto 16px auto;
+	}
+}
+
+#respond {
+	h3 {
+		font-size: 26px;
+	}
+	label {
+		margin-left: 8px;
+		small {
+			font-family: 'Open Sans', sans-serif;
+			font-size: 14px;
+			color: $darkestGray;
+			font-weight: normal;
+		}
+	}
+	textarea, 
+	input[type="text"] {
+		max-width: 100%;
+		min-height: 28px;
+		padding: 1px 5px 1px 5px;
+		border-color: $primary;
+		border-width: 1px;
+		color: $darkestGray;
+		@include border-radius(3px);
+		&:focus {
+			outline: none;
+		}
+	}
+	input[type="text"] {
+		width: 260px;
+	}
+	input[name="submit"] {
+		@extend a.button;
+	}
+}

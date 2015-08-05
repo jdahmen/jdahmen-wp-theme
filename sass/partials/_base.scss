@@ -28,8 +28,12 @@ h1, h2, h3 {
 	}
 	a:hover {
 		color: $darkerBlue;
-		text-decoration: none;
 		@include transition(color .16s);
+	}
+	a:visited,
+	a:hover,
+	a:link {
+		text-decoration: none;
 	}
 }
 
