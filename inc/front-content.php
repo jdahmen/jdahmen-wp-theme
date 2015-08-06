@@ -90,12 +90,12 @@
               if (have_posts()) :
                 while (have_posts()) : the_post(); ?>
 
-                <div class="col-md-4 excerpt">  
-                  <h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
-                  <?php include 'post-details.php'; ?>
-                  <?php the_excerpt(__('(more…)')); ?>
-                  <a class="button" href="<?php the_permalink(); ?>">Read More</a>
-                </div>
+              <div class="col-md-4 excerpt">  
+                <h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
+                <?php include 'post-details.php'; ?>
+                <?php the_excerpt(__('(more…)')); ?>
+                <a class="button" href="<?php the_permalink(); ?>">Read More</a>
+              </div>
 
             <?php
               endwhile;
@@ -109,10 +109,15 @@
     </div>
   </div>
 </div>
-<div class="container">
-  <div id="contact" class="row">
+<div class="container" id="contact">
+  <div id="contact-form" class="row">
     <div class="col-md-12">
-      <?php echo do_shortcode( '[contact-form-7 id="37" title="Contact form 1"]' ); ?>
+      <h1><a href="<?php echo bloginfo('url') . '/contact/'; ?>">Contact</a></h1>
+      <div class="row">
+        <div class="col-md-12">
+          <?php echo do_shortcode( '[contact-form-7 id="57" title="Home contact form"]' ); ?>
+        </div>
+      </div>
     </div>
   </div>
 </div>

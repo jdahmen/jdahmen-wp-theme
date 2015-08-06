@@ -32,8 +32,49 @@
 	}
 	input[type="text"] {
 		width: 260px;
+		border-top-width: 0;
+		border-right-width: 0;
+		border-left-width: 0;
 	}
 	input[name="submit"] {
 		@extend a.button;
+		&:hover {
+			@extend a.button:hover;
+			color: $white;
+		}
+		&:active {
+			@extend a.button:active;
+		}		
+		@extend a.button:link;
+		@extend a.button.blue;
+	}
+}
+
+@media (max-width: 767px) {
+
+	#respond {
+		text-align: center;
+		label,
+		input {
+			float: left;
+		}
+		input[type="text"] {			
+			width: 100%;
+		}
+		input[name="submit"] {
+			float: none;
+		}
+		textarea {
+			width: 100%;
+		}
+		label {
+			margin: 0 auto 8px 8px;
+			&:last-of-type {
+				margin-bottom: 16px;
+			}
+			small {
+				font-weight: bold;
+			}
+		}
 	}
 }

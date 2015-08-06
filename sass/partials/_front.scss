@@ -13,17 +13,23 @@
 }
 
 #contact {
-	#contact-form input, textarea {
+	input, textarea {
 		background-color: $white;
+		width: 100%;
 		color: $darkestGray;
 		padding: 4px 5px 4px 5px;
 		border: 1px solid $primary;
 		border-radius: 3px;
+		margin-top: 2px;
 		@include transition(background-color .2s);
+	}
+	p {
+		float: left;
+		margin: 4px auto 4px auto;
+		width: 100%;
 	}
 	textarea, #contact-form input {
 		margin-bottom: 14px;
-		width: 48.9%;
 		float: left;
 	}
 	textarea {
@@ -34,13 +40,21 @@
 		#emailInput {
 			float: right;
 		}
-		#sendBtn {
-			width: 100%;
-			&:hover {
-				background-color: darken($white, 8%);
-				@include transition(background-color .2s);
-			}
+	}
+	.wpcf7-form-control.wpcf7-textarea {
+		height: 336px;
+	}
+	input[type="submit"] {
+		@extend a.button;
+		&:hover {
+			@extend a.button:hover;
+			color: $white;
 		}
+		&:active {
+			@extend a.button:active;
+		}		
+		@extend a.button:link;
+		@extend a.button.blue;
 	}
 }
 
@@ -68,5 +82,14 @@
 .wpcf7-form {
 	input {
 		max-width: 100%;
+	}
+}
+
+@media (max-width: 767px) {
+
+	#contact-form{
+		.wpcf7-form-control.wpcf7-textarea {
+			height: 260px;
+		}
 	}
 }

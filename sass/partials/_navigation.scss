@@ -1,12 +1,12 @@
 .navbar {	
 	&.fancy {
-		min-height:70px !important;
+		min-height:60px !important;
 		background-color: $transparent;
 		border-color: $transparent;
 		border-bottom-width: 0px;
 		@include transition(background-color .3s);
 		&.on-scroll {
-			background-color: rgb(40, 40, 45);
+			background-color: $darkerGray;
 			@include box-shadow(-3px 0 5px rgba(0, 0, 0, 0.4));
 			@include transition(background-color .5s);
 			@include transition(box-shadow .5s);
@@ -14,8 +14,8 @@
 		.navbar-nav {
 			li {
 				a {
-					padding-top: 25px !important;
-					padding-bottom: 25px !important;
+					padding-top: 20px !important;
+					padding-bottom: 20px !important;
 					padding-left: 13px;
 					padding-right: 13px;
 					font-family: 'Slabo 13px', serif;
@@ -55,7 +55,7 @@
 			}
 		}
 		.navbar-brand {
-			padding-top: 22px !important;
+			padding-top: 21px !important;
 			font-size: 35px;
 			color: $transparent;
 			#layer1 {
