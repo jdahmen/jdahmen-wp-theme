@@ -15,8 +15,8 @@
    height="512"
    id="svg2"
    version="1.1"
-   inkscape:version="0.48.4 r9939"
-   sodipodi:docname="logo.svg"
+   inkscape:version="0.91 r13725"
+   sodipodi:docname="logo-darkgray.svg"
    inkscape:export-filename="C:\Users\Jordan\Desktop\Dahmen.png"
    inkscape:export-xdpi="90"
    inkscape:export-ydpi="90">
@@ -336,13 +336,13 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="1.4142136"
-     inkscape:cx="59.130595"
+     inkscape:cx="218.01739"
      inkscape:cy="259.3255"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
      inkscape:window-width="1920"
-     inkscape:window-height="1018"
+     inkscape:window-height="1017"
      inkscape:window-x="-8"
      inkscape:window-y="-8"
      inkscape:window-maximized="1" />
@@ -377,7 +377,7 @@
      transform="translate(0,-540.36218)"
      style="display:inline">
     <path
-       style="fill:#9d9d9d;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-opacity:1;stroke-width:2;stroke-miterlimit:4;stroke-dasharray:none;opacity:1"
+       style="fill:#9d9da4;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-opacity:1;stroke-width:2;stroke-miterlimit:4;stroke-dasharray:none;opacity:1"
        d="m 256.12946,540.36218 -0.0324,0.0324 0,0.48545 -0.0324,0.0323 0,0.51782 L 146.933,659.17074 0,612.59883 l 47.737042,224.02422 72.981028,44.1446 -67.252585,-1.424 16.440963,82.04296 186.190652,90.78139 0,0.1942 0.22655,-0.097 0.2589,0.097 0,-0.1942 185.70518,-90.78139 16.37625,-82.04296 -67.05842,1.424 72.78686,-44.1446 L 512,612.59883 365.48775,659.17074 256.61491,541.4302 l 0,-0.51783 -0.0324,-0.0323 0,-0.48545 -0.0324,-0.0323 -0.19419,0.22655 -0.22655,-0.22655 z"
        id="path2985"
        inkscape:connector-curvature="0" />
