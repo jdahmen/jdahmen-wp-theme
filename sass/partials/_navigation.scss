@@ -55,7 +55,7 @@
 			}
 		}
 		.navbar-brand {
-			padding-top: 21px !important;
+			padding-top: 8px !important;
 			font-size: 35px;
 			color: $transparent;
 			#layer1 {
@@ -64,7 +64,7 @@
 		}
 		.navbar-brand {
 			> img {
-				margin-top: -8px;
+				margin-top: 0;
 				margin-right: 12px;
 				height: 40px;
 				width: 40px;
@@ -103,7 +103,7 @@
 	.navbar.fancy {
 		.navbar-brand {
 			> img {
-				margin-top: -10px;
+				margin-top: 3px;
 				margin-right: 12px;
 				height: 35px;
 				width: 35px;
@@ -116,7 +116,7 @@
 
 	.navbar {
 		&.fancy {
-			min-height: 56px !important;
+			min-height: 51px !important;
 			.navbar-collapse {
 				background-color: rgba(35, 35, 35, 1);
 			}
@@ -124,7 +124,7 @@
 		&-default {
 			&.fancy {
 				.navbar-brand {
-					padding-top: 20px !important;
+					padding-top: 17px !important;
 				}
 				.navbar-collapse, .navbar-form {
 					border-color: rgba(35, 35, 35, 1);

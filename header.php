@@ -14,16 +14,16 @@
 
 	<div id="content">
 		<div id="header-image" data-parallax="scroll" data-image-src="<?php echo get_stylesheet_directory_uri(); ?>/img/fancy-bg.jpg">
-			<div class="container">
+			<div class="container" id="standard-header">
 				<div  class="superheader">
 					<h1>
 						<?php
 							if ( is_archive() ) {
 								echo 'Archives';
-							} elseif ( is_home() ) {
+							} elseif ( is_home() ||  is_single() ) {
 								echo 'Blog';
 							} else {
-								echo '&nbsp;';
+								echo get_the_title();
 							}
 						?>
 					</h1>
