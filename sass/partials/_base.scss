@@ -1,3 +1,4 @@
+// Universally applied styles
 body {
 	font-family: 'Open Sans', sans-serif;
 	background: $white;
@@ -6,6 +7,7 @@ body {
 	line-height: 23px;
 }
 
+// Special adjustment when using WP admin panel
 body.logged-in { 
 	.navbar {
 		padding-top: 32px !important;
@@ -60,6 +62,7 @@ img {
 	height: auto;
 }
 
+// Small screens
 @media (max-width: 767px) {
 
 	h1 {

@@ -1,3 +1,4 @@
+// Single page scenario
 .single {
 	h1 {
 		font-weight: bold;
@@ -11,12 +12,14 @@
 		font-size: $h5-info-font-size;
 		line-height: 1.32em;
 	}
+	// WP image caption text
 	.wp-caption-text {
 		font-size: 0.85em;
 		margin: 6px auto 10px auto;
 	}
 }
 
+// Tag info
 .post_tags {
 	a {
 		&, &:hover, &:visited {
@@ -30,6 +33,7 @@
 	}
 }
 
+// Excerpts of articles and/or pages
 .excerpt {
 	margin-bottom: 24px;
 	&.list {
@@ -49,6 +53,7 @@
 	}
 }
 
+// Blog specific modifications
 #blog {
 	br {
 		font-size: 1.4em;
@@ -58,6 +63,7 @@
 	}
 }
 
+// Blog detail ribbon
 .single, .excerpt, #blog {
 	h5 {
 		font-size: $h5-info-font-size;
@@ -69,6 +75,7 @@
 	}
 }
 
+// Small screens
 @media (max-width: 767px) {
 
 	h5 {

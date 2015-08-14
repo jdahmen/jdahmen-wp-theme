@@ -1,3 +1,5 @@
+// Prefabricated redirection buttons
+// Blue by default
 a.button{
 	/* Default button variables */
 	$default-button-shadow: inset 0 3px 5px 0px rgba(0,0,0,0.1);
@@ -11,7 +13,7 @@ a.button{
 		text-decoration: none;
 		background-color: $lightestGray;
 		@include transition($default-button-transition);
-		font-size: 0.95em;
+		font-size: 16px;
 	}
 	&:hover {
 		background-color: darken($lightestGray, 8%);
@@ -37,6 +39,7 @@ a.button{
 	}
 }
 
+// Gray varient of button
 .gray {
 	a.button {
 		&, &:hover, &:visited {
