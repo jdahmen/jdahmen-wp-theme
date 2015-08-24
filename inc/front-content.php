@@ -2,9 +2,9 @@
 
 <div class="gray xtra-padding">
   <div class="container">
-    <div id="resume" class="row">
+    <div id="about" class="row">
         <div class="col-md-12">
-          <h1><a href="#">R&#233sum&#233</a></h1>
+          <h1><a href="#">About</a></h1>
           <div class="row">
               <div class="col-md-4">
                 <h3>George Mason University</h3>

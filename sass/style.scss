@@ -11,12 +11,14 @@
 
 // Variables and Standarization
 @import "compass";
+@import "partials/mixins";
 @import "partials/variables";
 @import "partials/normalize";
 
 // Catagories
 @import "partials/base";
 @import "partials/buttons";
+@import "partials/forms";
 @import "partials/navigation";
 @import "partials/header";
 @import "partials/searchform";

@@ -4,12 +4,13 @@
 
 
 	<div class="row">
-		<div class="col-md-12 single">  
-		    <h1 class="title"><?php the_title(); ?></h1>		  	
+		<div class="col-md-12 single">
+			<?php 
+				if ( is_single() ): ?>
+				<h1 class="title"><?php the_title(); ?></h1>	  	
 	  		<?php 
-	  			if ( is_single() ) {
 	  				include 'post-details.php';
-	  			}
+	  			endif;
 	  	  		if ( is_single() || is_page() ) {
 	  	  			echo '<p>';
 	  	  			the_content(); 
