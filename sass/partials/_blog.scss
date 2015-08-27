@@ -4,11 +4,12 @@
 		font-weight: bold;
 		color: $darkestGray;
 		&.title {
-			margin: 32px 0 0 0;
+			margin: 24px 0 8px 0;
+			line-height: 1.1em;
 		}
 	}
 	h5 {
-		margin: 16px auto 24px 2px;
+		margin: 24px auto 24px 2px;
 		font-size: $h5-info-font-size;
 		line-height: 1.32em;
 	}
@@ -45,10 +46,15 @@
 		margin-bottom: 16px;
 	}
 	hr {
-		margin: 16px auto 8px auto;
+		display: block;
+	    height: 1px;
+	    border: 0;
+	    border-top: 1px dotted $darkestGray;
+	    margin: 1em 0;
+	    padding: 0;
 	}
 	p {
-		margin: 16px auto 24px auto;
+		margin: 16px auto 16px auto;
 		overflow: hidden;
 	}
 }
@@ -70,15 +76,77 @@
 		color: lighten( $darkestGray, 50% );
 		border-left: 3px solid $primary;
 		padding-left: 12px;
-		margin: 12px auto 12px 2px;
+		margin: 16px auto 26px 2px;
 		line-height: 1.25em;
+	}
+}
+
+// Floating tiles formatting, aka "expo"
+.card-wrapper{
+	min-height: 100% !important;
+	height: auto;
+	.card {
+		overflow: hidden;
+		min-height: 100% !important;
+		height: auto;
+		@include rounded( 4px );
+		padding: 8px 24px 8px 24px;
+		background-color: $white;
+		@include box-shadow(1px, 1px, 8px, rgba(0, 0, 0, 0.25), false);
+		hr {
+			margin: 12px auto 12px auto;
+		}
+	}
+}
+
+// Tablet screens
+@media (max-width: 991px) {
+
+	.single {
+		h1 {
+			font-size: 38px;
+		}
+	}
+
+	.single, .excerpt, #blog {
+		h5 {
+			margin: 16px auto 22px 2px;
+		}
+	}
+
+	.card-wrapper {
+		margin: auto auto 24px auto;
+	}
+
+	.list.card-wrapper {
+		&:last-child {
+			margin-bottom: 24px;
+		}
 	}
 }
 
 // Small screens
 @media (max-width: 767px) {
 
+	.single {
+		&.card-wrapper {
+			padding-left: 8px;
+			padding-right: 8px;
+			.card {
+				padding-left: 14px;
+				padding-right: 14px;
+			}
+		}
+		h1 {
+			font-size: 36px;
+		}
+	}
+
 	h5 {
 		font-size: 1em;
+	}
+
+	.card-wrapper {
+		margin: auto auto 16px auto;
 	}
 }

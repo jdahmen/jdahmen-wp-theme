@@ -7,7 +7,7 @@
 */
 
 // Fonts
-@import url(http://fonts.googleapis.com/css?family=Lobster|Patua+One|Roboto+Slab|Slabo+13px);
+@import url(http://fonts.googleapis.com/css?family=Patua+One|Roboto+Slab|Slabo+13px);
 
 // Variables and Standarization
 @import "compass";
@@ -33,7 +33,7 @@
 .error-404 {
 	min-height: 40vh;
 	h1 {
-		font-size: 3.5em;
+		font-size: 3.5em;		
 		color: $primary;
 	}
 	h3 {

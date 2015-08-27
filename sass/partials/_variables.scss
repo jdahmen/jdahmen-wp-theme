@@ -1,7 +1,7 @@
 /* Colors */
 
 // Custom primary colors
-$customLightBlue: darken(#29B6F6, 4%);
+$customBlue: #008BD9;
 $customRed: #FF0000;
 
 // Common colors
@@ -14,13 +14,16 @@ $gray: #D0D0D6;
 $darkGray: #9D9DA0;
 $darkerGray: #1A1A1D;
 $darkestGray: #0E0E10;
-$darkerBlue: #13A0E0;
+$darkerBlue: darken($customBlue, 16%);
 
 // Special colors
 $transparent: rgba(0, 0, 0, 0);
 
 // Used primary colors
-$primary: $customLightBlue;
+$primary: $customBlue;
+$yellow: #FDB902;
+$red: #FF3400;
+$green: #00DD64;
 
 /* Abbreviations */
 $a-tags: 'a, a:active, a:hover, a:visited';

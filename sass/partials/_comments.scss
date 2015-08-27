@@ -37,16 +37,7 @@
 		border-left-width: 0;
 	}
 	input[name="submit"] {
-		@extend a.button;
-		&:hover {
-			@extend a.button:hover;
-			color: $white;
-		}
-		&:active {
-			@extend a.button:active;
-		}		
-		@extend a.button:link;
-		@extend a.button.blue;
+		
 	}
 }
 

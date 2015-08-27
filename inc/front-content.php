@@ -1,26 +1,32 @@
-<div class="blue-bar"></div>
+<div class="page-bar"></div>
 
-<div class="gray xtra-padding">
-  <div class="container">
-    <div id="about" class="row">
-        <div class="col-md-12">
-          <h1><a href="#">About</a></h1>
-          <div class="row">
-              <div class="col-md-4">
+<div class="page-spacer"></div>
+
+<div class="container first">
+  <div id="about" class="row">
+      <div class="col-md-12">
+        <h1><a href="#">About</a></h1>
+        <div class="row">
+            <div class="col-md-4 card-wrapper">
+              <div class="card">
                 <h3>George Mason University</h3>
                 <h4><i>B.S. Computer Science (Exp, Fall 2015)</i></h4>
                 <p>
                   During my education at GMU, I studied subjects such as data structuring, algorithm analysis, security, concurrency, and low level architectures.
                 </p>
               </div>
-              <div class="col-md-4">
+            </div>
+            <div class="col-md-4 card-wrapper">
+              <div class="card">
                 <h3>SimonComputing Inc.</h3>
                 <h4><i>Jr. Developer, Nov 2012 - Jun 2013 </i></h4>
                 <p>
                   I designed and developed Java Enterprise applications for medium to large scale projects using agile development techniques. All projects employed test driven development, normal form standarization of SQL models, and rapid prototyping tools for efficent and effective coding.
-                </p>                  
-              </div>
-              <div class="col-md-4">
+                </p>
+              </div>             
+            </div>
+            <div class="col-md-4 card-wrapper">
+              <div class="card">
                 <h3>Skills</h3>
                 <div class="progress">
                   <div class="progress-bar" role="progressbar" aria-valuenow="90"
@@ -54,57 +60,71 @@
                 </div>
               </div>
             </div>
-        </div>
-    </div>
+          </div>
+      </div>
   </div>
 </div>
+
+<div class="page-spacer"></div>
+
 <div class="container">
   <div id="work" class="row">
     <div class="col-md-12">
       <h1><a href="#">Work</a></h1>
         <div class="row">
-          <div class="col-md-4">
-             <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/code_1.png">
+          <div class="col-md-4 card-wrapper">            
+            <div class="card">
+              <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/code_1.png">
+            </div>
           </div>
-          <div class="col-md-4">
-            <h3>Reddit Scraper</h3>
-            <p>
-              As part of a class project, I co-developed a proof of concept reddit user scraper. Using concurrent programming techniques and JSoup,
-            </p>
+          <div class="col-md-4 card-wrapper">            
+            <div class="card">
+              <h3>Reddit Scraper</h3>
+              <p>
+                As part of a class project, I co-developed a proof of concept reddit user scraper. Using concurrent programming techniques and JSoup,
+              </p>
+            </div>
           </div>
-          <div class="col-md-4">
-
+          <div class="col-md-4 card-wrapper">              
+            <div class="card">
+                <!-- empty -->
+            </div>
           </div>
         </div>
     </div>
   </div>
 </div>
-<div class="gray">
-  <div class="container">
-    <div id="blog" class="row">
-      <div class="col-md-12">
-        <h1><a href="<?php echo bloginfo('url') . '/blog/'; ?>">Blog</a></h1>
-          <div class="row">
-            <?php
-              query_posts('showposts=3');
-              if (have_posts()) :
-                while (have_posts()) : the_post(); ?>
 
-              <div class="col-md-4 excerpt">  
+<div class="page-spacer"></div>
+
+<div class="container">
+  <div id="blog" class="row">
+    <div class="col-md-12">
+      <h1><a href="<?php echo bloginfo('url') . '/blog/'; ?>">Blog</a></h1>
+        <div class="row">
+          <?php
+            query_posts('showposts=3');
+            if (have_posts()) :
+              while (have_posts()) : the_post(); ?>
+
+            <div class="col-md-4 excerpt card-wrapper">  
+              <div class="card">
                 <h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
                 <?php include 'post-details.php'; ?>
                 <?php the_excerpt(__('(more…)')); ?>
+                <!--
                 <a class="button" href="<?php the_permalink(); ?>">Read More</a>
+                -->
               </div>
+            </div>
 
-            <?php
-              endwhile;
+          <?php
+            endwhile;
 
-              else:
-                echo ('<h3>No content found</h3>');
-              endif;
-            ?>
-        </div>
+            else:
+              echo ('<h3>No content found</h3>');
+            endif;
+          ?>
       </div>
     </div>
   </div>

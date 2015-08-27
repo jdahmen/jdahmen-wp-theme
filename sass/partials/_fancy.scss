@@ -46,9 +46,15 @@
 	}
 }
 
-.blue-bar {
-	border-top: 30px solid $primary;
-	@include box-shadow(3px, 0px, 30px, rgba(0, 0, 0, 0.6));
+.page-bar {
+	border-top: 4px solid $primary;
+	@include box-shadow(0px, 0px, 16px, rgba(0, 0, 0, 0.75));
+}
+
+.page-spacer {
+	background-color: $lightestGray;
+	height: 32px;
+	width: 100%;
 }
 
 @media (min-width: 1921px) {
@@ -66,6 +72,9 @@
 	}
 	#fancy-content {
 		background-size: contain;
+	}
+	.page-spacer {
+		height: 28px;	
 	}
 }
 
@@ -85,5 +94,8 @@
 				font-size: 34px;
 			}
 		}
+	}
+	.page-spacer {
+		height: 24px;
 	}
 }

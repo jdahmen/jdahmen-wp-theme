@@ -17,18 +17,20 @@
 			<div class="container" id="standard-header">
 				<div  class="superheader">
 					<h1>
-						<?php
-							if ( is_archive() ) {
-								echo 'Archives';
-							} elseif ( is_home() ||  is_single() ) {
-								echo 'Blog';
-							} else {
-								echo get_the_title();
-							}
-						?>
+						<span>
+							<?php
+								if ( is_archive() ) {
+									echo 'Archives';
+								} elseif ( is_home() ||  is_single() ) {
+									echo 'Blog';
+								} else {
+									echo get_the_title();
+								}
+							?>
+						</span>
 					</h1>
 				</div>
 			</div>
-			<div class="blue-bar"></div>
+			<div class="page-bar"></div>
 		</div>
 

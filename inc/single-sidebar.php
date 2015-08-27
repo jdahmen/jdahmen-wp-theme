@@ -1,7 +1,9 @@
 <div id="sidebar">
 	<div class="row">
 		<div class="col-md-12">
-			<?php get_search_form(); ?>
+			<div class="well search-well">
+				<?php get_search_form(); ?>
+			</div>
 		</div>
 	</div>
 	<div class="row">

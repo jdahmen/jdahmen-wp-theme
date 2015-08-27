@@ -1,7 +1,7 @@
 // Universally applied styles
 body {
 	font-family: 'Open Sans', sans-serif;
-	background: $white;
+	background: $lightestGray;
 	color: $darkestGray;
 	font-size: 16px;
 	line-height: 23px;
@@ -29,7 +29,7 @@ h1, h2, h3 {
 		text-decoration: none;
 	}
 	a:hover {
-		color: $darkerBlue;
+		color: lighten($primary, 12%);
 		@include transition(color .16s);
 	}
 	a:visited,
@@ -41,6 +41,7 @@ h1, h2, h3 {
 
 h1 {
 	font-size: 44px;
+	font-family: 'Roboto Slab', serif;
 }
 
 h2 {
@@ -55,6 +56,15 @@ h3 {
 h4 {
 	margin: 12px auto 12px auto;
 	font-size: 22px;
+}
+
+hr {
+	display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px dotted $darkGray;
+    margin: 32px auto 32px auto;
+    padding: 0;
 }
 
 img {
