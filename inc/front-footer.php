@@ -7,7 +7,7 @@
                         and it appears you're looking for more! Maybe go check out my 
                         <a href="<?php echo bloginfo('url') . '/blog/'; ?>">blog</a> to 
                         see my latest project, or get in touch on my 
-                        <a href="<?php echo bloginfo('url') . '/blog/'; ?>">contact</a> page.
+                        <a href="<?php echo bloginfo('url') . '/contact/'; ?>">contact</a> page.
                     </p>
           		</div>
           		<div class="col-md-4">

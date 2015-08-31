@@ -13,8 +13,8 @@
   	// Front page changable content
   	include 'inc/front-content.php';
 
-  	// Front page custom
-  	include 'inc/front-footer.php';
+    // Front page custom
+    include 'inc/front-footer.php';
 	?>	
 
 <!-- </body> in following file -->

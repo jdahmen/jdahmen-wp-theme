@@ -5,7 +5,7 @@
 <div class="container first">
   <div id="about" class="row">
       <div class="col-md-12">
-        <h1><a href="#">About</a></h1>
+        <h1><a href="<?php echo bloginfo('url') . '/about/'; ?>">About</a></h1>
         <div class="row">
             <div class="col-md-4 card-wrapper">
               <div class="card">
@@ -70,7 +70,7 @@
 <div class="container">
   <div id="work" class="row">
     <div class="col-md-12">
-      <h1><a href="#">Work</a></h1>
+      <h1><a href="<?php echo bloginfo('url') . '/work/'; ?>">Work</a></h1>
         <div class="row">
           <div class="col-md-4 card-wrapper">            
             <div class="card">
