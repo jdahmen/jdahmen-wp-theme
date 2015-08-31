@@ -8,6 +8,7 @@
   <script src="<?php echo get_stylesheet_directory_uri(); ?>/js/affix.js"></script>
   <script src="<?php echo get_stylesheet_directory_uri(); ?>/js/parallax.min.js"></script>
   <script src="<?php echo get_stylesheet_directory_uri(); ?>/js/custom.js"></script>
+  <script src="<?php echo get_stylesheet_directory_uri(); ?>/js/prism.js"></script>
 
 	<?php 
 	/**

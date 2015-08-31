@@ -17,17 +17,17 @@
 			<div class="container" id="standard-header">
 				<div  class="superheader">
 					<h1>
-						<span>
-							<?php
+						<span><?php
 								if ( is_archive() ) {
 									echo 'Archives';
 								} elseif ( is_home() ||  is_single() ) {
 									echo 'Blog';
-								} else {
+								} elseif (the_title()) {
 									echo get_the_title();
+								} else {
+									echo '';
 								}
-							?>
-						</span>
+							?></span>
 					</h1>
 				</div>
 			</div>
