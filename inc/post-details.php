@@ -4,5 +4,7 @@
   		</a> on <?php echo get_the_date('F jS, Y');  ?> 
   	<?php if(has_tag()) {?>
   	-  <?php the_tags(); 
-  	}?>	| <?php comments_number( '0 comments', '1 comment', '% responses' ); ?>
+  	}?>	| <a href="<?php the_permalink(); ?>#comment-head">
+  		<?php comments_number( '0 comments', '1 comment', '% responses' ); ?>
+  	</a>
 </h5>
