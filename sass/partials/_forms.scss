@@ -1,7 +1,158 @@
+/* 
+ * Customization of forms, such as text input,
+ * text areas, selectors, and dropdowns.
+ */
+
 form {
-	input {
-		&[type="text"] {
-			@include gradient($lighterGray, $white);
+
+	.action-wrapper {
+		position: relative;
+		input:not([type="submit"]),
+		textarea {
+			width: calc(100% - 8px);
+			padding: 4px;
+			border: none;
+			border-bottom: 2px solid $darkGray;
+		    outline: none;
+		    margin: 14px 4px 14px 4px;
+		    background: none;
+		    clear: both;
+		    &:focus {
+		    	border-bottom: 2px solid $primary;
+		    	& + label {
+		    		z-index: -1;
+		    		position: absolute;
+		    		top: -6px;
+		    		left: 6px;
+		    		color: $primary;
+		    		font-size: 12px;
+		    		animation: float-labels 300ms none ease-out;
+			  		-webkit-animation: float-labels 300ms none ease-out;
+			  		-webkit-animation-fill-mode: forwards;
+	    			animation-fill-mode: forwards;
+			  		animation-play-state:running !important;
+			  		-webkit-animation-play-state:running !important;
+		    	}
+		    }
+		    & + label {
+		    	z-index: -1;
+		    	position: absolute;
+		    	top: 16px;
+		    	left: 6px;
+		    	font-size: 16px;
+		    	color: $darkGray;   	
+		    }
 		}
+		&.not-empty {
+			input:not([type="submit"]),
+			textarea {
+				& + label {
+					z-index: -1;
+		    		position: absolute;
+		    		top: -6px;
+		    		left: 6px;
+		    		color: $darkGray;
+		    		font-size: 12px;
+				}
+				&:focus + label {
+					z-index: -1;
+					color: $primary;
+				}
+			}
+		}
+		&.loaded {
+			input:not([type="submit"]),
+			textarea {
+				& + label {
+					animation: float-labels-reverse 200ms none ease-in;
+			  		-webkit-animation: float-labels-reverse 200ms none ease-in;
+			  		-webkit-animation-fill-mode: forwards;
+	    			animation-fill-mode: forwards;
+			  		animation-play-state:running !important;
+			  		-webkit-animation-play-state:running !important; 
+				}
+			}
+		}
+	}
+	input[type="submit"] {
+		border: 0px;
+		outline: none;
+		@extend a.button.blue;
+		float: none;
+	}
+}
+
+
+@media (max-width: 767px) {
+
+}
+
+@keyframes float-labels {
+  
+	0% {
+	    opacity: 0;
+	    top: 16px;
+	    color: $darkGray;
+	    font-size: 16px;
+  	}
+  	50% {
+  		opacity: 0.1;
+  	}
+	100% {
+		top: -6px; 
+		opacity:1; 
+	}
+}
+
+@-webkit-keyframes float-labels {  
+  
+   	0% {
+	    opacity: 0;
+	    top: 16px;
+	    color: $darkGray;
+	    font-size: 16px;
+  	}
+  	50% {
+  		opacity: 0.1;
+  	}
+	100% {
+		top: -6px; 
+		opacity:1; 
+	}
+}
+
+@keyframes float-labels-reverse {
+  
+	0% {
+	    opacity: 0;
+	    top: -6px;
+	    color: $primary;
+	    font-size: 12px;
+  	}
+  	50% {
+  		opacity: 0.25;
+  	}
+	100% {
+		top: 16px; 
+		opacity:1; 
+		color: $darkGray;
+	}
+}
+
+@-webkit-keyframes float-labels {  
+  
+	0% {
+	    opacity: 0;
+	    top: -6px;
+	    color: $primary;
+	    font-size: 12px;
+  	}
+  	50% {
+  		opacity: 0.25;
+  	}
+	100% {
+		top: 16px; 
+		opacity:1; 
+		color: $darkGray;
 	}
 }
