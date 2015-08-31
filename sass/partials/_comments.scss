@@ -1,70 +1,135 @@
+#comments {
+	// Comments header	
+}
+
+#comment-list {
+	list-style: none;
+	height: auto;
+	width: 100%;
+	padding: 0px;
+	.comment {
+		margin: 12px auto 12px auto;
+		&.odd {
+			.comment-content {
+				background-color: $lightGray;
+			}
+		}
+		.comment-avatar {
+			img {
+				@include rounded(50%);
+				@include box-shadow(0px, 1px, 5px, rgba(0, 0, 0, 0.25));
+			}
+		}
+		.comment-content {			
+			background-color: $white;
+			@include rounded( 4px );
+			.comment-author {
+				margin-top: 14px;
+				.comment-meta {
+					display: inline-block;
+				}
+			}
+			.fn {
+				font-weight: bold;
+				font-style: normal;
+			}
+			.comment-meta {
+				font-size: 12px;
+				color: $darkGray;
+			}
+			.text {
+				p {
+					margin: 10px auto 10px auto;
+				}
+			}
+			.reply {
+				margin-bottom: 14px;
+			}
+		}
+	}
+}
+
 .commentlist {
 	p {
 		margin: 16px auto 16px auto;
 	}
 }
 
-#respond {
-	h3 {
-		font-size: 26px;
+#comment-form-wrapper {
+	#respond {
+		margin-top: 24px;
 	}
-	label {
-		margin-left: 8px;
-		small {
-			font-family: 'Open Sans', sans-serif;
-			font-size: 14px;
-			color: $darkestGray;
-			font-weight: normal;
+	.comment-notes,
+	p.form-submit {
+		margin: 8px auto 16px auto;
+	}
+	.comment-form-comment {
+		textarea {
+			height: 100px;
 		}
 	}
-	textarea, 
-	input[type="text"] {
-		max-width: 100%;
-		min-height: 28px;
-		padding: 1px 5px 1px 5px;
-		border-color: $primary;
-		border-width: 1px;
-		color: $darkestGray;
-		@include border-radius(3px);
-		&:focus {
-			outline: none;
+}
+
+@media (max-width: 991px) {
+
+	#comment-list {
+		.comment {
+			.comment-avatar {
+				img {
+					width: auto;
+					max-width: 65px;
+					height: auto;
+				}
+			}
+			.comment-content {
+				.text {
+					p {
+						margin: 8px auto 8px auto;
+					}
+				}
+			}
 		}
 	}
-	input[type="text"] {
-		width: 260px;
-		border-top-width: 0;
-		border-right-width: 0;
-		border-left-width: 0;
+	#comment-form-wrapper {
+		.comment-form-comment {
+			textarea {
+				height: 120px;
+			}
+		}
 	}
-	input[name="submit"] {
-		
-	}
+}
+
+#comment-form-wrapper {
+
 }
 
 @media (max-width: 767px) {
 
+	#comment-list {
+		.comment {
+			.comment-avatar {
+				padding-left: 0px;
+				img {
+					width: 100%;
+					height: auto;
+				}
+			}
+			.comment-content {
+				.text {
+					p {
+						margin: 6px auto 8px auto;
+					}
+				}
+			}
+		}
+	}
 	#respond {
 		text-align: center;
-		label,
-		input {
-			float: left;
-		}
-		input[type="text"] {			
-			width: 100%;
-		}
-		input[name="submit"] {
-			float: none;
-		}
-		textarea {
-			width: 100%;
-		}
-		label {
-			margin: 0 auto 8px 8px;
-			&:last-of-type {
-				margin-bottom: 16px;
-			}
-			small {
-				font-weight: bold;
+	}
+	#comment-form-wrapper {
+		.comment-form-comment {
+			textarea {
+				height: 130px;
 			}
 		}
 	}
