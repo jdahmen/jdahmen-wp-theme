@@ -1,0 +1,37 @@
+/* 
+ * Webkit specific customization of the scrollbar
+ */
+
+// Scrollbar wrapper
+::-webkit-scrollbar {
+    width: 16px;
+    background: $lighterGray;
+}
+
+// Scrollbar end buttons
+::-webkit-scrollbar-button {
+	width: 16px;
+	height: 2px;
+}
+
+// Scrollbar outer track
+::-webkit-scrollbar-track {
+    background: $lightGray;
+   	border: thin solid $lightestGray;
+   	@include box-shadow(0px, 0px, 4px, rgba(0, 0, 0, 0.25), inset);
+   	border-radius: 12px;
+}
+
+// Scrollbar thumb icon
+::-webkit-scrollbar-thumb {
+    background-color: $darkGray;
+    border-radius: 12px;
+    @include transition(background-color .4s);
+    @include box-shadow(0px, 0px, 4px, rgba(0, 0, 0, 0.25));
+}
+
+// Scrollbar thumb icon on hover
+::-webkit-scrollbar-thumb:hover {
+    background-color: lighten($darkGray, 8%);
+    @include transition(background-color .4s);
+}  
