@@ -14,8 +14,10 @@ get_header(); ?>
 	<div id="content">
 		<div class="container">
 			<div class="row">
-				<div class="col-md-12">
-					<?php include 'inc/display-single.php'; ?>
+				<div class="col-md-12 card-wrapper">
+					<div class="card">
+						<?php include 'inc/display-single.php'; ?>
+					</div>
 				</div>
 			</div>
 		</div>
