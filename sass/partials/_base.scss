@@ -5,10 +5,12 @@ body {
 	color: $darkestGray;
 	font-size: 16px;
 	line-height: 23px;
+	min-height: 100%;
 }
 
 // Special adjustment when using WP admin panel
-body.logged-in { 
+body.logged-in {
+	min-height: calc(100% - 32px); 
 	.navbar {
 		padding-top: 32px !important;
 	}

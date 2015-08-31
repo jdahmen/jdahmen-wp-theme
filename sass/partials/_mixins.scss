@@ -62,3 +62,12 @@
   background: -moz-linear-gradient(top,  $from, $to);
   filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#{$from}', endColorstr='#{$to}');
 }
+
+// Clearfix
+@mixin clearfix() {
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
