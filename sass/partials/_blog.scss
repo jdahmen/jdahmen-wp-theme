@@ -95,6 +95,9 @@
 		@include box-shadow(1px, 1px, 8px, rgba(0, 0, 0, 0.25), false);
 		hr {
 			margin: 12px auto 12px auto;
+			height: 0;
+			border-top: solid $lighterGray 2px;
+			@include rounded(50%);
 		}
 	}
 }
@@ -148,5 +151,10 @@
 
 	.card-wrapper {
 		margin: auto auto 16px auto;
+	}
+
+	.pull-right-md, 
+	.pull-left-md {
+		float: none !important;
 	}
 }
