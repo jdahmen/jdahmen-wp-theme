@@ -73,6 +73,56 @@ form {
 				}
 			}
 		}
+		> span {
+			 & + label {
+		    	z-index: -1;
+		    	position: absolute;
+		    	top: 16px;
+		    	left: 6px;
+		    	font-size: 16px;
+		    	color: $darkGray;   	
+		    }
+			&:hover {
+				& + label {
+		    		z-index: -1;
+		    		position: absolute;
+		    		top: -6px;
+		    		left: 6px;
+		    		color: $primary;
+		    		font-size: 12px;
+		    		animation: float-labels 300ms none ease-out;
+			  		-webkit-animation: float-labels 300ms none ease-out;
+			  		-webkit-animation-fill-mode: forwards;
+	    			animation-fill-mode: forwards;
+			  		animation-play-state:running !important;
+			  		-webkit-animation-play-state:running !important;
+		    	}
+			}
+			&.loaded {
+				& + label {
+					animation: float-labels-reverse 200ms none ease-in;
+			  		-webkit-animation: float-labels-reverse 200ms none ease-in;
+			  		-webkit-animation-fill-mode: forwards;
+	    			animation-fill-mode: forwards;
+			  		animation-play-state:running !important;
+			  		-webkit-animation-play-state:running !important; 
+				}
+				&.not-empty {
+					& + label {
+						z-index: -1;
+			    		position: absolute;
+			    		top: -6px;
+			    		left: 6px;
+			    		color: $darkGray;
+			    		font-size: 12px;
+					}
+					&:hover + label {
+						z-index: -1;
+						color: $primary;
+					}
+				}
+			}
+		}
 	}
 	input[type="submit"] {
 		border: 0px;
@@ -82,9 +132,21 @@ form {
 	}
 }
 
+#contact-form {
+	textarea {
+		height: 200px;
+		max-height: auto;
+	}
+}
+
 
 @media (max-width: 767px) {
-
+	#contact-form {
+		textarea {
+			height: 160px;
+			max-height: auto;
+		}
+	}
 }
 
 @keyframes float-labels {

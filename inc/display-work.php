@@ -1,6 +1,11 @@
 <?php
-	if (have_posts()) :
-		while (have_posts()) : the_post(); ?>
+	// Define array query parameters
+    $the_query = new WP_Query( array(
+        'cat' => 20,
+      ) );
+    // The loop
+    if ( $the_query->have_posts() ) :
+      while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
 
 
 	<div class="row">
@@ -27,8 +32,8 @@
 	endwhile;
 
 	else:
-		echo ('<div class="col-md-12 card-wrapper">' .
-				'<div class="card"<h3>No content found</h3></div>' . 
-				'</div>');
+		echo ('<div class="col-md-12"><h3>No content found</h3></div>');
 	endif;
+	// Reset data
+	wp_reset_postdata(); 
 ?>

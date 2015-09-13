@@ -108,4 +108,14 @@ function alter_comment_form_fields($fields){
 
 add_filter('comment_form_default_fields','alter_comment_form_fields');
 
+//DEREGISTER CONTACT FORM 7 STYLES
+add_action( 'wp_print_styles', 'voodoo_deregister_styles', 100 );
+ 
+function voodoo_deregister_styles() {
+    wp_deregister_style( 'contact-form-7' );
+}
+
+define ('WPCF7_AUTOP', false );   // set to false to remove <br> tags
+define ('WPCF7_LOAD_JS', false); // Added to disable JS loading
+
 ?>

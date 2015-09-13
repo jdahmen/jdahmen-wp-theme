@@ -75,11 +75,10 @@
           <?php
             // Define array query parameters
             $the_query = new WP_Query( array(
-                'cat' => 15,
+                'cat' => 20,
                 'showposts' => 3,
               ) );
             // The loop
-            query_posts('cat=15');
             if ( $the_query->have_posts() ) :
               while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
 
@@ -115,11 +114,10 @@
           <?php
             // Define array query parameters
             $the_query = new WP_Query( array(
-                'cat' => -15,
+                'cat' => -20,
                 'showposts' => 3,
               ) );
             // The loop
-            query_posts('cat=15');
             if ( $the_query->have_posts() ) :
               while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
 
