@@ -72,25 +72,35 @@
     <div class="col-md-12">
       <h1><a href="<?php echo bloginfo('url') . '/work/'; ?>">Work</a></h1>
         <div class="row">
-          <div class="col-md-4 card-wrapper">            
-            <div class="card">
-              <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/code_1.png">
+          <?php
+            // Define array query parameters
+            $the_query = new WP_Query( array(
+                'cat' => 15,
+                'showposts' => 3,
+              ) );
+            // The loop
+            query_posts('cat=15');
+            if ( $the_query->have_posts() ) :
+              while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
+
+            <div class="col-md-4 excerpt card-wrapper">  
+              <div class="card">
+                <h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
+                <?php include 'post-details.php'; ?>
+                <?php the_excerpt(__('(more…)')); ?>
+                <!--
+                <a class="button" href="<?php the_permalink(); ?>">Read More</a>
+                -->
+              </div>
             </div>
-          </div>
-          <div class="col-md-4 card-wrapper">            
-            <div class="card">
-              <h3>Reddit Scraper</h3>
-              <p>
-                As part of a class project, I co-developed a proof of concept reddit user scraper. Using concurrent programming techniques and JSoup,
-              </p>
-            </div>
-          </div>
-          <div class="col-md-4 card-wrapper">              
-            <div class="card">
-                <!-- empty -->
-            </div>
-          </div>
-        </div>
+          <?php
+            endwhile;
+            wp_reset_postdata();         
+            else:
+              echo ('<div class="col-md-12"><h3>No content found</h3></div>');
+            endif;
+          ?>
+      </div>
     </div>
   </div>
 </div>
@@ -103,9 +113,15 @@
       <h1><a href="<?php echo bloginfo('url') . '/blog/'; ?>">Blog</a></h1>
         <div class="row">
           <?php
-            query_posts('showposts=3');
-            if (have_posts()) :
-              while (have_posts()) : the_post(); ?>
+            // Define array query parameters
+            $the_query = new WP_Query( array(
+                'cat' => -15,
+                'showposts' => 3,
+              ) );
+            // The loop
+            query_posts('cat=15');
+            if ( $the_query->have_posts() ) :
+              while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
 
             <div class="col-md-4 excerpt card-wrapper">  
               <div class="card">
@@ -117,12 +133,11 @@
                 -->
               </div>
             </div>
-
           <?php
             endwhile;
-
+            wp_reset_postdata();         
             else:
-              echo ('<h3>No content found</h3>');
+              echo ('<div class="col-md-12"><h3>No content found</h3></div>');
             endif;
           ?>
       </div>

@@ -27,6 +27,6 @@
 	endwhile;
 
 	else:
-		echo ('<h3>No content found</h3>');
+		echo ('<div class="col-md-12"><h3>No content found</h3></div>');
 	endif;
 ?>
