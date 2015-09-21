@@ -102,6 +102,10 @@
 	}
 }
 
+.archive-wrapper {
+
+}
+
 // Tablet screens
 @media (max-width: 991px) {
 
@@ -124,6 +128,15 @@
 	.list.card-wrapper {
 		&:last-child {
 			margin-bottom: 24px;
+		}
+	}
+
+	.archive-wrapper {
+		h1 {
+			color: $white;
+			padding: 4px 8px 4px 8px;
+			background-color: rgba(0, 0, 0, 0.5);
+			display: inline;
 		}
 	}
 }

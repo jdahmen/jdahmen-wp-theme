@@ -4,7 +4,28 @@
  */
 
 form {
-
+	::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+		color: $darkGray;
+		font-weight: bold;
+		font-size: 18px;
+	}
+	:-moz-placeholder {	/* Mozilla Firefox 4 to 18 */
+		color: $darkGray;
+		opacity: 1;
+		font-weight: bold;
+		font-size: 18px;
+	}
+	::-moz-placeholder { /* Mozilla Firefox 19+ */
+		color: $darkGray;
+		opacity: 1;
+		font-weight: bold;
+    	font-size: 18px;
+	}
+	:-ms-input-placeholder { /* Internet Explorer 10-11 */
+	   	color: $darkGray;
+		font-weight: bold;
+    	font-size: 18px;
+	}
 	.action-wrapper {
 		position: relative;
 		input:not([type="submit"]),
@@ -25,7 +46,7 @@ form {
 		    		top: -6px;
 		    		left: 6px;
 		    		color: $primary;
-		    		font-size: 12px;
+		    		font-size: 14px;
 		    		animation: float-labels 300ms none ease-out;
 			  		-webkit-animation: float-labels 300ms none ease-out;
 			  		-webkit-animation-fill-mode: forwards;
@@ -39,7 +60,7 @@ form {
 		    	position: absolute;
 		    	top: 16px;
 		    	left: 6px;
-		    	font-size: 16px;
+		    	font-size: 18px;
 		    	color: $darkGray;   	
 		    }
 		}
@@ -52,7 +73,7 @@ form {
 		    		top: -6px;
 		    		left: 6px;
 		    		color: $darkGray;
-		    		font-size: 12px;
+		    		font-size: 14px;
 				}
 				&:focus + label {
 					z-index: -1;
@@ -79,7 +100,7 @@ form {
 		    	position: absolute;
 		    	top: 16px;
 		    	left: 6px;
-		    	font-size: 16px;
+		    	font-size: 18px;
 		    	color: $darkGray;   	
 		    }
 			&:hover {
@@ -89,7 +110,7 @@ form {
 		    		top: -6px;
 		    		left: 6px;
 		    		color: $primary;
-		    		font-size: 12px;
+		    		font-size: 14px;
 		    		animation: float-labels 300ms none ease-out;
 			  		-webkit-animation: float-labels 300ms none ease-out;
 			  		-webkit-animation-fill-mode: forwards;
@@ -114,7 +135,7 @@ form {
 			    		top: -6px;
 			    		left: 6px;
 			    		color: $darkGray;
-			    		font-size: 12px;
+			    		font-size: 14px;
 					}
 					&:hover + label {
 						z-index: -1;
@@ -155,7 +176,7 @@ form {
 	    opacity: 0;
 	    top: 16px;
 	    color: $darkGray;
-	    font-size: 16px;
+	    font-size: 18px;
   	}
   	50% {
   		opacity: 0.1;
@@ -172,7 +193,7 @@ form {
 	    opacity: 0;
 	    top: 16px;
 	    color: $darkGray;
-	    font-size: 16px;
+	    font-size: 18px;
   	}
   	50% {
   		opacity: 0.1;
@@ -189,7 +210,7 @@ form {
 	    opacity: 0;
 	    top: -6px;
 	    color: $primary;
-	    font-size: 12px;
+	    font-size: 14px;
   	}
   	50% {
   		opacity: 0.25;
@@ -201,13 +222,13 @@ form {
 	}
 }
 
-@-webkit-keyframes float-labels {  
+@-webkit-keyframes float-labels-reverse {  
   
 	0% {
 	    opacity: 0;
 	    top: -6px;
 	    color: $primary;
-	    font-size: 12px;
+	    font-size: 14px;
   	}
   	50% {
   		opacity: 0.25;
